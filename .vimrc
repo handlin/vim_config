@@ -1,13 +1,22 @@
+let mapleader="," " set 'leader' key to ','
+
+" enable syntax processing
 syntax on
 
-" filetype plugin indent on
+" INDENTING
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set ruler
-set hls
 
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
+" COLORS
+" a nice color scheme
+"set background=dark
+"colorscheme badwolf
 
-
+" SEARCHING
+" turn off search highlight with ',spacebar'
+nnoremap <leader><space> :nohlsearch<CR>
+set showmatch " highlight matching [{()}]
+set incsearch " search as charachters are entered
+set hlsearch " highlight search matches
